@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Tarifi Düzenle</title>
+  <link rel="stylesheet" href="style/main.css" />
+</head>
+<body>
+<script>
+  if (!localStorage.getItem('loggedInUser')) {
+    alert("Lütfen önce giriş yapın.");
+    window.location.href = "login.html";
+  }
+</script>
+
+<div class="container">
+  <h2>Tarifi Düzenle</h2>
+  <form id="duzenleForm">
+    <input type="text" id="ad" required />
+    <textarea id="malzemeler" required></textarea>
+    <textarea id="icerik" required></textarea>
+    <input type="number" id="puan" min="1" max="5" required />
+    <button type="submit" class="btn">Güncelle</button>
+  </form>
+  <a href="index.html" class="btn btn-small">Geri</a>
+</div>
+
+<script src="js/duzenle.js"></script>
+</body>
+</html>

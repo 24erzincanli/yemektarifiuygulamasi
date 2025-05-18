@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Tarifler</title>
+  <link rel="stylesheet" href="style/main.css" />
+</head>
+<body>
+<script>
+  if (!localStorage.getItem('loggedInUser')) {
+    alert("Lütfen önce giriş yapın.");
+    window.location.href = "login.html";
+  }
+</script>
+
+<div class="container">
+  <h2>Tarifler</h2>
+  <input type="text" id="searchInput" placeholder="Tarif ara..." />
+  <div id="tarifListesi"></div>
+
+  <a href="tarif-ekle.html" class="btn">Tarif Ekle</a>
+  <button onclick="logout()" class="btn btn-small">Çıkış Yap</button>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>

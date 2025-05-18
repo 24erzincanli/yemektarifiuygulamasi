@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Tarif Ekle</title>
+  <link rel="stylesheet" href="style/main.css" />
+</head>
+<body>
+<script>
+  if (!localStorage.getItem('loggedInUser')) {
+    alert("Lütfen önce giriş yapın.");
+    window.location.href = "login.html";
+  }
+</script>
+
+<div class="container">
+  <h2>Yeni Tarif Ekle</h2>
+  <form id="tarifForm">
+    <input type="text" id="ad" placeholder="Tarif Adı" required />
+    <textarea id="malzemeler" placeholder="Malzemeler" required></textarea>
+    <textarea id="icerik" placeholder="Yapılışı" required></textarea>
+    <input type="number" id="puan" placeholder="Puan (1-5)" min="1" max="5" required />
+    <button type="submit" class="btn">Kaydet</button>
+  </form>
+  <a href="index.html" class="btn btn-small">Geri</a>
+</div>
+<script src="js/ekle.js"></script>
+</body>
+</html>
